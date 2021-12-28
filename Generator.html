@@ -137,7 +137,7 @@ if(myHighSchool!=-1){
   <script>
   function sendTexJSON() {
     
-    let institute = document.querySelector('#institute');
+    	let institute = document.querySelector('#institute');
 	let highSchool = document.querySelector('#highSchool');
 	let discipline = document.querySelector('#discipline');
 	let document_type = document.querySelector('#document_type');
@@ -145,7 +145,7 @@ if(myHighSchool!=-1){
 	let theme = document.querySelector('#theme');
 	let variant = document.querySelector('#variant');
 	let student = document.querySelector('#student');
-    let teacher = document.querySelector('#teacher');
+    	let teacher = document.querySelector('#teacher');
 	let groupNumber = document.querySelector('#groupNumber');
 	let year = document.querySelector('#year');
 	
@@ -166,7 +166,7 @@ if(myHighSchool!=-1){
 <script>
   function sendPdfJSON() {
     
-    let institute = document.querySelector('#institute');
+    	let institute = document.querySelector('#institute');
 	let highSchool = document.querySelector('#highSchool');
 	let discipline = document.querySelector('#discipline');
 	let document_type = document.querySelector('#document_type');
@@ -174,7 +174,7 @@ if(myHighSchool!=-1){
 	let theme = document.querySelector('#theme');
 	let variant = document.querySelector('#variant');
 	let student = document.querySelector('#student');
-    let teacher = document.querySelector('#teacher');
+    	let teacher = document.querySelector('#teacher');
 	let groupNumber = document.querySelector('#groupNumber');
 	let year = document.querySelector('#year');
 	
@@ -183,9 +183,9 @@ if(myHighSchool!=-1){
     let url = "http://localhost:8080/generate?documentExtension=pdf";
 
     xhr.open("POST", url, true);
-    // устанавливаем заголовок — выбираем тип контента, который отправится на сервер, в нашем случае мы явно пишем, что это JSON
+    
     xhr.setRequestHeader("Content-Type", "application/json");
-    // преобразуем наши данные JSON в строку
+    
     var data = JSON.stringify({ "institute": institute.value, "highSchool": highSchool.value, "discipline": discipline.value, "document_type": document_type.value, "document_number": document_number.value, "theme": theme.value, "variant": variant.value, "student": student.value, "teacher": teacher.value, "groupNumber": groupNumber.value, "year": year.value});
    
     xhr.send(data);
