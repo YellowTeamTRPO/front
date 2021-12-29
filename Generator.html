@@ -160,7 +160,7 @@ if(myHighSchool!=-1){
   
     let xhr = new XMLHttpRequest();
  
-    let url = "http://localhost:8080/generate?documentExtension=tex";
+    let url = "http://localhost:9090/generate?document_extension=TEX";
 
     xhr.open("POST", url, true);
 
@@ -207,7 +207,7 @@ var data = JSON.stringify({ "institute": institute, "higherSchool": higherSchool
   
     let xhr = new XMLHttpRequest();
  
-    let url = "http://localhost:8080/generate?documentExtension=pdf";
+    let url = "http://localhost:9090/generate?document_extension=PDF";
 
     xhr.open("POST", url, true);
 
